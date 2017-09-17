@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friend Finder</title>
+
+	<!-- Link to the jQuery Library -->
+  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  	<!-- Including Font Awesome Icons--> 
+  	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+
+	<!-- Link to reset stylesheet -->
+	<link rel="stylesheet" href="css/reset.css">
+
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Compiled and minified Materialize CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+	<!-- Compiled and minified Materialize JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+          
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="nav-wrapper blue accent-2">
+				<i class="fa fa-address-book-o fa-5x" aria-hidden="true" id=logo-icon></i>
+				<a href="/" class="brand-logo" id="logo">Friend Finder</a>
+				<ul class="right hide-on-med-and-down" id="head-nav-links">
+					<li><a href="/survey">Survey</a></li>
+					<li><a href="/api/friends">API Friends List</a></li>
+					<li><a href="https://github.com/cjdaly1342/friend-finder">GitHub Repo</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col s12 z-depth-5 mainpanel">
+					<div id="mainpanel-content">
+						<h1>Survey Questions</h1>
+						<div class="divider"></div>
+
+						<h3>About You</h3>
+
+						<div class="input-field col s6">
+							<h5>Name (Required)</h5>
+							<i class="material-icons prefix">account_circle</i>
+							<input type="text" class="validate" placeholder="Your Name Here" id="userName">
+						</div>
+
+						<div class="input-field col s6">
+							<h5>Link to Photo Image (Required)</h5>
+							<i class="material-icons prefix">picture_in_picture</i>
+							<input type="text" class="validate" placeholder="Photo Link Here" id="userPhoto">
+						</div>
+
+						<!-- Survey Questions -->
+						<div class="input-field col s12">
+							<h3>Question 1</h3>
+							<h5>How important is it to you, to surround yourself with like minded individuals?</h5>
+							<select id="question1">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">1 - I prefer to be with people who don't always agree with me.</option>
+								<option value="2">2 - I need to be around at least one person who usually agrees with me</option>
+								<option value="3">3 - I prefer a mix</option>
+								<option value="4">4 - I can tolerate people who don't agree.</option>
+								<option value="5">5 - I need to constantly be in an echo chamber, less friction that way.</option>
+							</select>
+						</div>
+
+						<div class="input-field col s12">
+							<h3>Question 2</h3>
+							<h5>How do you act when things don't go your way?</h5>
+							<select id="question2">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">1 - I am used to getting what I want, so I can be quite childish when things don't go my way.</option>
+								<option value="2">2 - I tend to get upset and will pout.</option>
+								<option value="3">3 - I do get upset, but after a few minutes of being upset, I usually get over it.</option>
+								<option value="4">4 - I question why this happened and move on.</option>
+								<option value="5">5 - Everything will be alright, I move on very quickly.</option>
+							</select>
+						</div>
+
+						<div class="input-field col s12">
+							<h3>Question 3</h3>
+							<h5>How do you manage your time and resources when you have alot to do and have people relying on you.</h5>
+							<select id="question3">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">1 - If I have too many things going on, I shutdown and nothing gets done.</option>
+								<option value="2">2 - I experience panic attacks</option>
+								<option value="3">3 - I do become overwhelmed quite easily, but can manage if I can take extra time.</option>
+								<option value="4">4 - I just take one thing at a time, when they get done, they get done.</option>
+								<option value="5">5 - I use whatever tools I have available to me to organize, and if I think I need help, I am not afraid to ask.</option>
+							</select>
+						</div>
+
+						<div class="input-field col s12">
+							<h3>Question 4</h3>
+							<h5>How important is rational and critical thinking to you?</h5>
+							<select id="question4">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">1 - I am a traditional person, and I live my life and make descisions based on how they best fit in with my traditional values.</option>
+								<option value="2">2 - I make most of my descisions based on my traditional values.</option>
+								<option value="3">3 - I only use my critical thinking skills for issues that don't confilct with my traditional values.</option>
+								<option value="4">4 - I try to make all my descisions thinking critically.</option>
+								<option value="5">5 - I am a problem solver and will not let outdated value systems get in the way of a solution to a problem.</option>
+							</select>
+						</div>
+
+						<div class="input-field col s12">
+							<h3>Question 5</h3>
+							<h5>How easily offended are you?</h5>
+							<select id="question5">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">1 - I am offended by anyone who doesn't agree with me.</option>
+								<option value="2">2 - I try to understand others point of view, but still find myself offended with differing opinions.</option>
+								<option value="3">3 - I can tolerate different points of view, but it doesn't take much to set me off.</option>
+								<option value="4">4 - I really try to be open minded, but can still be offended on certain subjects.</option>
+								<option value="5">5 - I try to see other peoples points of view and try not to be offended.</option>
+							</select>
+						</div>
+
+						<div class="input-field col s12">
+							<h3>Question 6</h3>
+							<h5>If you need something from someone, service, product, otherwise.  How do you go about getting what you want?</h5>
+							<select id="question6">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">1 - I have learned that if I am a jerk, yell and scream, I usually get what I want.</option>
+								<option value="2">2 - I ask politley once, if that doesn't work, I will scream and yell till I get what I want.</option>
+								<option value="3">3 - I will beg and plead, if I don't get what I want I pout and withdraw</option>
+								<option value="4">I will be polite and nice to a point, if that doesn't work, I will through a fit.</option>
+								<option value="5">5 - I am polite, nice and make sure the other person knows that they are under no obligation to give me what I want, that usually works.</option>
+							</select>
+						</div>
+
+						<div class="input-field col s12">
+							<h3>Question 7</h3>
+							<h5>Are you trustworthy and reliable?</h5>
+							<select id="question7">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">1 - Since I am only out to serve myself, I don't really care if others view me as trustworthy or reliable.</option>
+								<option value="2">2 - I can be reliable to a point, but if it interferes with my own personal agenda, I don't care.</option>
+								<option value="3">3 - I try to be reliable, but I often fall short due to outside factors.</option>
+								<option value="4">4 - I do my best to be trustworthy and reliable, but I have fallen short on occasion</option>
+								<option value="5">5 - I make it my priorty to be trustworthy and reliable to others.</option>
+							</select>
+						</div>
+
+						<div class="input-field col s12">
+							<h3>Question 8</h3>
+							<h5>Do you hold grudges?</h5>
+							<select id="question8">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">1 - Yes, I never forget when someone has done something to me, no matter how small the slight was.</option>
+								<option value="2">2 - Yes, it depends on the severity of the slight against me though.</option>
+								<option value="3">3 - Maybe, it depends on what happened, if I am holding a grudge, you know it was bad.</option>
+								<option value="4">4 - For a while, but I can get over pretty much anything with the right amount of time.</option>
+								<option value="5">5 - No, I am only hurting myself, wasting energy on a grudge.  Forgive and forget.</option>
+							</select>
+						</div>
+
+						<div class="input-field col s12">
+							<h3>Question 9</h3>
+							<h5>How do you show your appreciation for others?</h5>
+							<select id="question9">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">1 - I don't, I have to assume if someone does something nice for me, it is only because they want something in return.</option>
+								<option value="2">2 - I will say thank you if I have to, but I try to avoid it.</option>
+								<option value="3">3 - I just thank the person I appreciate.</option>
+								<option value="4">4 - I give a sincere handshake and tell them they did a great job.</option>
+								<option value="5">5 - I let them know that I really appreciate whay they have done, if appropriate I leave a big tip, and try to learn from that person so I may better myself.</option>
+							</select>
+						</div>
+
+						<div class="input-field col s12">
+							<h3>Question 10</h3>
+							<h5>How do you feel about working with a group?</h5>
+							<select id="question10">
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">1 - I don't usually like it, but if I can take the lead, it can be tolerable.</option>
+								<option value="2">2 - I really prefer to work by myself.</option>
+								<option value="3">3 - I prefer to work by myself, but I will work with a team.</option>
+								<option value="4">4 - I enjoy working with a group, I just often feel like I don't contribute as much as others.</option>
+								<option value="5">5 - I prefer working with a group, the best solutions to problems are made from a team effort.</option>
+							</select>
+						</div>
+
+						<!-- Survey Submit Button -->
+						<div>
+							<button class="btn waves-effect waves-light" type="submit" name="action" id="submitButton">Submit Responses
+								<i class="material-icons right">send</i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="page-footer blue accent-2">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Friend Finder App</h5>
+					<p class="grey-text text-lighten-4">Thank you for taking the brief survey. Your responses will be used for training purposes only :-].</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="/api/friends">API Friends List</a></li>
+						<li><a class="grey-text text-lighten-3" href="https://github.com/cjdaly1342/friend-finder">GitHub Repo</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2017 Chris Daly
+				<a class="grey-text text-lighten-4 right" href="https://github.com/cjdaly1342">Reference Work</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Modal Dialog Displaying Closest Friend Match -->
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Closest Friend Match</h4>
+			<div class="divider"></div>
+			<h5 id="userMatch"></h5>
+			<img id="userMatchImage" class="materialboxed" width="650" src="">
+		</div>
+		<div class="modal-footer">
+			<a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('select').material_select();
+
+			$('.modal').modal({
+				dismissible: false, // Modal can be dismissed by clicking outside of the modal
+				opacity: .5, // Opacity of modal background
+				inDuration: 300, // Transition in duration
+				outDuration: 200, // Transition out duration
+				startingTop: '4%', // Starting top style attribute
+				endingTop: '10%' // Ending top style attribute
+			});
+		});
+
+		// Activate submit button
+		$('#submitButton').on('click', function(event) {
+			event.preventDefault();
+
+			// Gather user inputs
+			var userInput = {
+				name: $('#userName').val().trim(),
+				photo: $('#userPhoto').val().trim(),
+				scores:[
+					$('#question1').val().trim(),
+					$('#question2').val().trim(),
+					$('#question3').val().trim(),
+					$('#question4').val().trim(),
+					$('#question5').val().trim(),
+					$('#question6').val().trim(),
+					$('#question7').val().trim(),
+					$('#question8').val().trim(),
+					$('#question9').val().trim(),
+					$('#question10').val().trim()
+				]
+			};
+
+			// console.log('userInput = ' + JSON.stringify(userInput));
+
+			// Add user inputs to friends list
+			$.post('/api/friends', userInput)
+      		.done(function(data) {
+      			// console.log('response = ' + JSON.stringify(data));
+
+      			// Set the name and image values of friend match
+      			$('#userMatch').html(data.matchName);
+		    	$("#userMatchImage").attr("src", data.matchImage);
+
+		    	// Pop open the modal dialog
+      			$('#modal1').modal('open');
+      		});
+		});
+	</script>
+</body>
+</html>
